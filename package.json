@@ -1,0 +1,22 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.19",
+    "supertest": "^6.1.3"
+  },
+  "repository": "https://github.com/GisleneB/Desafio_Conceitos-Node.js.git",
+  "author": "Gislene Barros <laineb.sousa@gmail.com>"
+}

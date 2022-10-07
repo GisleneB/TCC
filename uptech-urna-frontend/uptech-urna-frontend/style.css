@@ -1,0 +1,241 @@
+@keyframes pisca {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.urna {
+  background-color: #dbd5c9;
+  padding: 1.875rem;
+  display: flex;
+}
+
+.tela {
+  width: 500px;
+  height: 320px;
+  background: linear-gradient(to right, #e8e8e8, #c1c1c1);
+  border: 2px solid #555;
+  display: flex;
+  flex-direction: column;
+}
+
+.divisao1 {
+  /* Flex: 1 = espaço disponivel
+   */
+  flex: 1;
+  display: flex;
+}
+
+.divisao-esquerda {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.texto {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.cargo {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quadrado-numero {
+  display: flex;
+  height: 50px;
+}
+
+.numero {
+  margin: 0;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 30px;
+  margin-right: 5px;
+  height: 40px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+}
+
+.pisca {
+  animation-name: pisca;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.descricao {
+  flex: 1;
+  line-height: 30px;
+}
+
+.divisao-direita {
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.imagem {
+  border: 1px solid #000;
+  background-color: #fff;
+  text-align: center;
+}
+
+.imagem.pequeno {
+  width: 80%;
+  font-size: 12px;
+}
+
+.imagem img {
+  width: 100%;
+}
+
+.divisao2 {
+  justify-content: center;
+  height: 50px;
+  font-size: 14px;
+  border-top: 2px solid #000;
+  padding-left: 10px;
+}
+
+.teclado {
+  background-color: #403a3a;
+  padding: 15px;
+  display: flex;
+  margin-left: 30px;
+}
+
+.area-teclado {
+  display: grid;
+  grid-template-areas:
+    "botao botao botao"
+    "botao botao botao"
+    "botao botao botao"
+    "botao0 botao0 botao0"
+    "botao-branco botao-corrige botao-confirma";
+  column-gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  width: 70px;
+  height: 40px;
+  color: #fff;
+  box-shadow: 3px 3px 0px #555;
+  cursor: pointer;
+}
+
+/* Animação de click  */
+.btn:active {
+  transform: translateY(4px);
+}
+
+.teclado-botao:nth-child(10) {
+  grid-area: botao0;
+  justify-self: center;
+  margin-right: 20px;
+}
+
+.btn-opcoes {
+  align-self: flex-end;
+  font-size: 12px;
+  height: 30px;
+  color: #000000;
+}
+
+.teclado-botao-branco {
+  background-color: #fff;
+  color: #000000;
+  grid-area: botao-branco;
+}
+
+.teclado-botao-corrige {
+  color: #000;
+  background-color: #f09046;
+  grid-area: botao-corrige;
+}
+
+.teclado-botao-confirma {
+  background-color: #48c079;
+  width: 90px;
+  height: 42px;
+  grid-area: botao-confirma;
+}
+
+.voto-nulo-branco {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.fim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 70px;
+}
+
+.reiniciar { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.botao-reiniciar { 
+  background-color: #008000;
+  box-shadow: none;
+  border: none;  
+}
+
+
+
+/*****************************
+         RESPONSIVIDADE
+ *****************************/
+
+@media screen and (max-width: 900px) {
+  .urna {
+    background-color: #dbd5c9;
+    padding: 30px;
+    display: flex;
+  }
+
+  .tela {
+    width: 400px;
+    height: 320px;    
+  }
+}
